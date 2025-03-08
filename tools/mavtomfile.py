@@ -9,7 +9,7 @@ from builtins import range
 import os
 import re
 import sys
-from pymavlink import mavutil
+from altamus_pymavlink import mavutil
 
 def process_tlog(filename):
     '''convert a tlog to a .m file'''

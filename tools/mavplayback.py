@@ -17,8 +17,8 @@ import sys
 import time
 import tkinter
 
-from pymavlink import fgFDM
-from pymavlink import DFReader
+from altamus_pymavlink import fgFDM
+from altamus_pymavlink import DFReader
 
 from argparse import ArgumentParser
 parser = ArgumentParser(description=__doc__)
@@ -37,7 +37,7 @@ args = parser.parse_args()
 
 if args.mav10:
     os.environ['MAVLINK10'] = '1'
-from pymavlink import mavutil
+from altamus_pymavlink import mavutil
 
 filename = args.log
 

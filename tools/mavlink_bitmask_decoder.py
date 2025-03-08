@@ -2,7 +2,7 @@
 
 from __future__ import print_function
 
-from pymavlink import mavutil
+from altamus_pymavlink import mavutil
 
 import argparse
 

@@ -7,8 +7,8 @@ from __future__ import print_function
 import unittest
 import pkg_resources
 
-from pymavlink.generator.mavparse import MAVXML
-from pymavlink.generator.mavparse import MAVParseError
+from altamus_pymavlink.generator.mavparse import MAVXML
+from altamus_pymavlink.generator.mavparse import MAVParseError
 
 class MAVXMLTest(unittest.TestCase):
     """

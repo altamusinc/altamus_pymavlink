@@ -27,7 +27,7 @@ try:
     from . import mavutil
 except Exception:
     # allows running uninstalled
-    from pymavlink import mavutil
+    from altamus_pymavlink import mavutil
 
 try:
     long        # Python 2 has long
@@ -641,9 +641,9 @@ class DFMetaData(object):
     def dot_pymavlink(*args):
         '''return a path to store pymavlink data'''
         if 'HOME' not in os.environ:
-            dir = os.path.join(os.environ['LOCALAPPDATA'], '.pymavlink')
+            dir = os.path.join(os.environ['LOCALAPPDATA'], '.altamus_pymavlink')
         else:
-            dir = os.path.join(os.environ['HOME'], '.pymavlink')
+            dir = os.path.join(os.environ['HOME'], '.altamus_pymavlink')
         if len(args) == 0:
             return dir
         return os.path.join(dir, *args)

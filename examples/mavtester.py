@@ -5,7 +5,7 @@ test mavlink messages
 '''
 from __future__ import print_function
 
-from pymavlink import mavtest, mavutil
+from altamus_pymavlink import mavtest, mavutil
 
 from argparse import ArgumentParser
 parser = ArgumentParser(description=__doc__)

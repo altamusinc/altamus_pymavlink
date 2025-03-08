@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import time
-from pymavlink import mavutil
+from altamus_pymavlink import mavutil
 
 master = mavutil.mavlink_connection("udp::14555", input=False, dialect="array_test")
 while True:

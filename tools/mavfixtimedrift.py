@@ -22,8 +22,8 @@ parser.add_argument("--fix", action='store_true', default=False)
 
 args = parser.parse_args()
 
-from pymavlink import mavutil
-from pymavlink import DFReader
+from altamus_pymavlink import mavutil
+from altamus_pymavlink import DFReader
 
 log1 = mavutil.mavlink_connection(args.log_in)
 

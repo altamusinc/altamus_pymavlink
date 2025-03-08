@@ -10,12 +10,12 @@ from builtins import range
 import sys, time, os
 import zipfile
 
-from pymavlink import mavutil
+from altamus_pymavlink import mavutil
 from math import degrees
 
 # extra imports for pyinstaller
 import json
-from pymavlink.dialects.v10 import ardupilotmega
+from altamus_pymavlink.dialects.v10 import ardupilotmega
 
 search_dirs = ['c:\Program Files\APM Planner',
                'c:\Program Files\Mission Planner',

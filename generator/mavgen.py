@@ -369,4 +369,4 @@ def mavgen_python_dialect(dialect, wire_protocol, with_type_annotations):
     return True
 
 if __name__ == "__main__":
-    raise DeprecationWarning("Executable was moved to pymavlink.tools.mavgen")
+    raise DeprecationWarning("Executable was moved to altamus_pymavlink.tools.mavgen")

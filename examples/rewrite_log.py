@@ -19,8 +19,8 @@ parser.add_argument("logout")
 
 args = parser.parse_args()
 
-from pymavlink import mavutil
-from pymavlink import DFReader
+from altamus_pymavlink import mavutil
+from altamus_pymavlink import DFReader
 import struct
 
 print("Opening %s" % args.login)

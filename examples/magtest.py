@@ -9,7 +9,7 @@ from __future__ import print_function
 import time
 from math import radians
 
-from pymavlink import mavutil
+from altamus_pymavlink import mavutil
 
 from argparse import ArgumentParser
 parser = ArgumentParser(description=__doc__)

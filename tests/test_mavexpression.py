@@ -9,7 +9,7 @@ from __future__ import print_function
 import unittest
 import random
 
-from pymavlink import mavexpression
+from altamus_pymavlink import mavexpression
 
 class ExpressionTest(unittest.TestCase):
 

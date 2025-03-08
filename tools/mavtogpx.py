@@ -17,7 +17,7 @@ parser.add_argument("--type", default=[], nargs="*")
 parser.add_argument("logs", metavar="LOG", nargs="+")
 args = parser.parse_args()
 
-from pymavlink import mavutil
+from altamus_pymavlink import mavutil
 
 
 def mav_to_gpx(infilename, outfilename, display_types=None):

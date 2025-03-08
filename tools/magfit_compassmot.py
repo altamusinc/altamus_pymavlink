@@ -14,8 +14,8 @@ parser.add_argument("logs", metavar="LOG", nargs="+")
 
 args = parser.parse_args()
 
-from pymavlink import mavutil
-from pymavlink.rotmat import Vector3
+from altamus_pymavlink import mavutil
+from altamus_pymavlink.rotmat import Vector3
 
 def mag_error(p, data):
     cx,cy,cz,r = p

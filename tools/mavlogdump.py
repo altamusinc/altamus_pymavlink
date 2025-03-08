@@ -23,7 +23,7 @@ else:
     runningPython3 = True
 
 try:
-    from pymavlink.mavextra import *
+    from altamus_pymavlink.mavextra import *
 except:
     print("WARNING: Numpy missing, mathematical notation will not be supported..")
 
@@ -68,7 +68,7 @@ if not args.mav10:
 
 import inspect
 
-from pymavlink import mavutil
+from altamus_pymavlink import mavutil
 
 
 if args.profile:

@@ -10,7 +10,7 @@ via a local TCP connection.
 """
 from __future__ import print_function
 
-from pymavlink import mavutil
+from altamus_pymavlink import mavutil
 from argparse import ArgumentParser
 import socket
 

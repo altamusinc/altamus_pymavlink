@@ -17,8 +17,8 @@ from __future__ import print_function
 
 import time
 
-from pymavlink import mavutil
-#from pymavlink import mavlinkv10 as mavlink
+from altamus_pymavlink import mavutil
+#from altamus_pymavlink import mavlinkv10 as mavlink
 
 from argparse import ArgumentParser
 parser = ArgumentParser(description=__doc__)

@@ -10,11 +10,11 @@ from builtins import range
 import sys, os
 import zipfile
 
-from pymavlink import mavutil
+from altamus_pymavlink import mavutil
 
 # extra imports for pyinstaller
 import json
-from pymavlink.dialects.v10 import ardupilotmega
+from altamus_pymavlink.dialects.v10 import ardupilotmega
 
 search_dirs = ['c:\Program Files\APM Planner',
                'c:\Program Files\Mission Planner',

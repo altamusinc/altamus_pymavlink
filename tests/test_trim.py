@@ -10,7 +10,7 @@ import unittest
 import os
 import pkg_resources
 import sys
-from pymavlink import mavutil
+from altamus_pymavlink import mavutil
 
 class PayLoadTrimZeros(unittest.TestCase):
     '''Trivial test for trimming zeros from end of messages'''

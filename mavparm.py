@@ -5,7 +5,7 @@ from __future__ import print_function
 
 
 import fnmatch, math, time, struct
-from pymavlink import mavutil
+from altamus_pymavlink import mavutil
 
 class MAVParmDict(dict):
     def __init__(self, *args):

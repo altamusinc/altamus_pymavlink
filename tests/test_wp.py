@@ -12,8 +12,8 @@ import sys
 
 os.environ["MAVLINK20"] = "1"
 
-from pymavlink import mavwp
-from pymavlink import mavutil
+from altamus_pymavlink import mavwp
+from altamus_pymavlink import mavutil
 
 class MAVWPTest(unittest.TestCase):
 

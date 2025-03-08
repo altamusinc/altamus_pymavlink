@@ -3,8 +3,8 @@
 find signs of aliasing on IMU3
 '''
 
-from pymavlink import mavutil
-from pymavlink import mavextra
+from altamus_pymavlink import mavutil
+from altamus_pymavlink import mavextra
 import math, sys, multiprocessing, random, time
 
 from argparse import ArgumentParser

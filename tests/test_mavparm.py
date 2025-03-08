@@ -9,7 +9,7 @@ from __future__ import print_function
 import unittest
 import os
 
-from pymavlink import mavparm
+from altamus_pymavlink import mavparm
 
 class MAVParmDictTest(unittest.TestCase):
 

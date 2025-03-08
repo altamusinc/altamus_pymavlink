@@ -16,8 +16,8 @@ parser.add_argument("logs", metavar="LOG", nargs="+")
 
 args = parser.parse_args()
 
-from pymavlink import mavutil
-from pymavlink.mavextra import distance_two
+from altamus_pymavlink import mavutil
+from altamus_pymavlink.mavextra import distance_two
 
 
 def flight_time(logfile):

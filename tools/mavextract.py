@@ -19,7 +19,7 @@ parser.add_argument("--link", default=None, type=int, help="only extract specifi
 parser.add_argument("logs", metavar="LOG", nargs="+")
 args = parser.parse_args()
 
-from pymavlink import mavutil
+from altamus_pymavlink import mavutil
 
 def older_message(m, lastm):
     '''return true if m is older than lastm by timestamp'''

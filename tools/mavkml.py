@@ -10,8 +10,8 @@ from builtins import range
 
 from argparse import ArgumentParser
 import simplekml
-from pymavlink.mavextra import *
-from pymavlink import mavutil
+from altamus_pymavlink.mavextra import *
+from altamus_pymavlink import mavutil
 import time
 import re
 import os

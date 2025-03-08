@@ -14,10 +14,10 @@ import copy
 import json
 import re
 import platform
-from pymavlink import mavexpression
+from altamus_pymavlink import mavexpression
 
 # We want to re-export x25crc here
-from pymavlink.generator.mavcrc import x25crc as x25crc
+from altamus_pymavlink.generator.mavcrc import x25crc as x25crc
 
 is_py3 = sys.version_info >= (3,0)
 supports_type_annotations = sys.version_info >= (3,6)
@@ -27,9 +27,9 @@ supports_type_annotations = sys.version_info >= (3,6)
 # at all we avoid throwing an exception if it isn't installed
 try:
     if supports_type_annotations:
-        from pymavlink.dialects.v10 import ardupilotmega
+        from altamus_pymavlink.dialects.v10 import ardupilotmega
     else:
-        from pymavlink.dialects.v10.python2 import ardupilotmega
+        from altamus_pymavlink.dialects.v10.python2 import ardupilotmega
 except Exception:
     pass
 
@@ -123,13 +123,13 @@ def set_dialect(dialect, with_type_annotations=None):
     legacy_python_module = "python2." if not with_type_annotations else ""
     if 'MAVLINK20' in os.environ:
         wire_protocol = mavparse.PROTOCOL_2_0
-        modname = "pymavlink.dialects.v20." + legacy_python_module + dialect
+        modname = "altamus_pymavlink.dialects.v20." + legacy_python_module + dialect
     elif mavlink is None or mavlink.WIRE_PROTOCOL_VERSION == "1.0" or not 'MAVLINK09' in os.environ:
         wire_protocol = mavparse.PROTOCOL_1_0
-        modname = "pymavlink.dialects.v10." + legacy_python_module + dialect
+        modname = "altamus_pymavlink.dialects.v10." + legacy_python_module + dialect
     else:
         wire_protocol = mavparse.PROTOCOL_0_9
-        modname = "pymavlink.dialects.v09." + legacy_python_module + dialect
+        modname = "altamus_pymavlink.dialects.v09." + legacy_python_module + dialect
 
     try:
         mod = __import__(modname)
@@ -1898,14 +1898,14 @@ def mavlink_connection(device, baud=115200, source_system=255, source_component=
 
     if device.lower().endswith('.bin') or device.lower().endswith('.px4log'):
         # support dataflash logs
-        from pymavlink import DFReader
+        from altamus_pymavlink import DFReader
         m = DFReader.DFReader_binary(device, zero_time_base=zero_time_base, progress_callback=progress_callback)
         mavfile_global = m
         return m
 
     if device.lower().startswith('csv:'):
         # support CSV logs
-        from pymavlink import CSVReader
+        from altamus_pymavlink import CSVReader
         # special-case for users wanting a : separator:
         colon_separator_re = ""
         if re.match(".*separator=::?.*", device):
@@ -1925,7 +1925,7 @@ def mavlink_connection(device, baud=115200, source_system=255, source_component=
 
     if device.endswith('.log'):
         # support dataflash text logs
-        from pymavlink import DFReader
+        from altamus_pymavlink import DFReader
         if DFReader.DFReader_is_text_log(device):
             m = DFReader.DFReader_text(device, zero_time_base=zero_time_base, progress_callback=progress_callback)
             mavfile_global = m
@@ -2272,7 +2272,7 @@ try:
     # AP_MAV_TYPE_MODE_MAP_DEFAULT dict.
     from os.path import expanduser
 
-    _custom_mode_map_path = os.path.join("~", ".pymavlink", "custom_mode_map.json")
+    _custom_mode_map_path = os.path.join("~", ".altamus_pymavlink", "custom_mode_map.json")
     _custom_mode_map_path = expanduser(_custom_mode_map_path)
     try:
         with open(_custom_mode_map_path) as f:

@@ -6,7 +6,7 @@ parser.add_argument("log")
 
 args = parser.parse_args()
 
-from pymavlink import mavutil
+from altamus_pymavlink import mavutil
 
 def process(logfile):
     '''look for duplicate raw gyro samples'''

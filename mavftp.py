@@ -29,12 +29,12 @@ from typing import Tuple
 
 from datetime import datetime
 
-from pymavlink import mavutil
+from altamus_pymavlink import mavutil
 
 
 # pylint: disable=too-many-lines
 
-from pymavlink.mavftp_op import (
+from altamus_pymavlink.mavftp_op import (
     FTP_OP,
     OP_Ack,
     OP_BurstReadFile,

@@ -17,11 +17,11 @@ Support having a $HOME/.pymavlink/mavextra.py for extra graphing functions
 '''
 home = os.getenv('HOME')
 if home is not None:
-    extra = os.path.join(home, '.pymavlink', 'mavextra.py')
+    extra = os.path.join(home, '.altamus_pymavlink', 'mavextra.py')
     if os.path.exists(extra):
         try:
             import imp
-            mavuser = imp.load_source('pymavlink.mavuser', extra)
+            mavuser = imp.load_source('altamus_pymavlink.mavuser', extra)
         except ModuleNotFoundError:
             # "imp" is removed in Python 3.12.  Try to use importlib instead:
             import sys
@@ -39,9 +39,9 @@ if home is not None:
                 loader.exec_module(module)
                 return module
 
-            load_source('pymavlink.mavuser', extra)
+            load_source('altamus_pymavlink.mavuser', extra)
 
-        from pymavlink.mavuser import *
+        from altamus_pymavlink.mavuser import *
 
 def evaluate_expression(expression, vars, nocondition=False):
     '''evaluation an expression'''

@@ -19,9 +19,9 @@ parser.add_argument("logs", metavar="LOG", nargs="+")
 
 args = parser.parse_args()
 
-from pymavlink import mavutil
-from pymavlink.rotmat import Vector3
-from pymavlink.rotmat import Matrix3
+from altamus_pymavlink import mavutil
+from altamus_pymavlink.rotmat import Vector3
+from altamus_pymavlink.rotmat import Matrix3
 
 
 def noise():
