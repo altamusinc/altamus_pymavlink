@@ -1,2 +1,2 @@
-'''Python MAVLink library - see https://mavlink.io/en/'''
-__version__ = '2.4.42'
+'''Altamus Python MAVLink library - see https://mavlink.io/en/'''
+__version__ = '1.0.0'
