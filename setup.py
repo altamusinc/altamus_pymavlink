@@ -34,6 +34,7 @@ def generate_content():
 
     for path in mdef_paths:
         mdef_path = os.path.join(os.path.dirname(os.path.realpath(__file__)), path)
+        print(mdef_path)
         if os.path.exists(mdef_path):
             print("Using message definitions from %s" % mdef_path)
             break
